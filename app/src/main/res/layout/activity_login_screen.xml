@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="#ff4fcfea"
+
+    >
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/lkicon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:id="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView2">
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailEt"
+            android:singleLine="true"
+            android:lines="1"
+            android:hint="Email"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/ff"
+            android:singleLine="true"
+            android:hint="Password"
+            android:lines="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Login to Lakwatsa "
+            android:id="@+id/textView4"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="for better experience"
+            android:id="@+id/textView6"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignStart="@+id/imageView2">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Login"
+            android:id="@+id/mainbt"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Back"
+            android:id="@+id/Back"
+            android:layout_below="@+id/mainbt"
+            android:layout_alignStart="@+id/mainbt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Sign up to Lakwatsa"
+            android:id="@+id/sClick"
+
+            android:layout_below="@+id/Back"
+            android:layout_alignParentStart="true"
+            android:onClick="sClick" />
+    </RelativeLayout>
+
+</RelativeLayout>

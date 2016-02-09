@@ -1,0 +1,72 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <!-- This LinearLayout represents the contents of the screen  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!-- The ActionBar displayed at the top -->
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false"
+            android:id="@+id/toolbar" />
+
+        <!-- The main content view where fragments are loaded -->
+        <RelativeLayout
+            android:id="@+id/flContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentBottom="true">
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:name="com.example.rhendel03.nav1.mainMap"
+                android:id="@+id/fragment"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_below="@+id/fragment2"
+                android:layout_alignParentStart="true" />
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:name="com.example.rhendel03.nav1.GetInput"
+                android:id="@+id/fragment2"
+
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- The navigation drawer that comes from the left -->
+    <!-- Note that `android:layout_gravity` needs to be set to 'start' -->
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nvView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/nav_header"
+    />
+
+
+</android.support.v4.widget.DrawerLayout>

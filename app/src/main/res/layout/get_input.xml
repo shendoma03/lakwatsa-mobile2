@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff3f0ec">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff5f5f5"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/linearLayout">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="SAN PUNTA?"
+            android:id="@+id/textView"
+            android:layout_marginLeft="15dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fce9e9e9"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/iLocation"
+            android:drawableLeft="@drawable/pin1"
+            android:singleLine="true"
+            android:lines="1"
+            android:hint="@string/location_hint"
+            android:imeOptions="actionDone"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/iDestination"
+            android:singleLine="true"
+            android:lines="1"
+            android:drawableLeft="@drawable/dest"
+            android:hint="@string/destination_hint"
+            android:layout_below="@+id/iLocation"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+        <android.support.design.widget.FloatingActionButton
+            android:src="@drawable/send1"
+            app:fabSize="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/fabGo"
+            android:onClick="fabGo"
+            android:layout_below="@+id/iLocation"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
